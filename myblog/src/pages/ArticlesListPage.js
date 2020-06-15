@@ -5,7 +5,7 @@ const ArticlesListPage = () => (
 
     <>
         <h1>Articles List</h1>
-        <ArticlesList  articles= {articleContent}/>
+        <ArticlesList  articles = {articleContent}/>
     </>
 )
 

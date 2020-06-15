@@ -48,8 +48,8 @@ const articles = [
             consequat quam. Vivamus accumsan dui in facilisis aliquet.`,
         ]
     },     {
-        name: 'my-thoughts-on-resumes',
-        title: 'My Thoughts on Resumes',
+        name: 'resumes',
+        title: 'Resumes',
         content: [
             `Today is the day I talk about something which scares most people: resumes.
             In reality, I'm not sure why people have such a hard time with proin congue
