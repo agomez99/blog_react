@@ -1,6 +1,6 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+   font-size: 18px;
 }
 
 button {
@@ -53,7 +53,7 @@ nav a:hover {
 #page-body {
   max-width: 700px;
   margin: auto;
-  padding-top: 64px;
+  padding-top: 20%;
 }
 
 .article-list-item {
