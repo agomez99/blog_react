@@ -102,4 +102,9 @@ app.post('/api/articles/:name/add-comment', (req, res) => {
 });
 
 
-app.listen(8000, () => console.log('Listening on port 8000'));
+const PORT = process.env.PORT||8000;
+
+
+app.listen(PORT, function() {
+  console.log(`🌎==> API Server now listening on PORT ${PORT}  `);
+});
