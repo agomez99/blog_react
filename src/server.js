@@ -2,14 +2,17 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { MongoClient } from 'mongodb';
 import path from 'path';
+const routes = require("../routes");
+
+require('dotenv').config()
 
 const app = express();
 app.use (express.static(path.join(__dirname, '/build')));
 app.use(bodyParser.json());
-
+const MONGODB = process.env.REACT_APP_KEY
 const withDB = async (operations, res) => {
     try {
-        const client = await MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true });
+        const client = await MongoClient.connect(MONGODB, { useNewUrlParser: true });
         const db = client.db('my-blog');
     
         await operations(db);
@@ -80,7 +83,4 @@ app.post('/api/articles/:name/add-comment', (req, res) => {
 });
 
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/build/index.html'));
-})
 app.listen(8000, () => console.log('Listening on port 8000'));
