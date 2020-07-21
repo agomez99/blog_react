@@ -2,6 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import {Header } from 'grommet';
 import {Github,Linkedin, Twitter} from 'grommet-icons'
+import { Button } from 'grommet';
+
 import './App.css'
 const Navbar = () => (
 
@@ -22,13 +24,13 @@ const Navbar = () => (
             </ul>
             <ul className="social">
                 <li>
-                <Github size="large"/>
+                <Button default  href="https://www.linkedin.com/in/austine-gomez/" ><Linkedin size="large"/></Button>
                 </li>
                 <li>
-                <Linkedin size="large"/>
+                <Button default  href="https://github.com/agomez99" ><Github size="large"/></Button>
                 </li>
                 <li>
-                <Twitter size="large"/>
+                <Button default  href="https://twitter.com/home" ><Twitter size="large"/></Button>
                 </li>
             </ul>
         </Header>

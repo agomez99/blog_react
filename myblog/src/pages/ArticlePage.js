@@ -6,7 +6,7 @@ import DownvotesSection from '../components/DownvotesSection'
 import AddCommentForm from '../components/AddCommentForm';
 import NotFoundPage from './NotFoundPage';
 import articleContent from './article-content';
-
+import  '../App.css';
 const ArticlePage = ({ match }) => {
 
 
@@ -31,12 +31,14 @@ const ArticlePage = ({ match }) => {
     return (
         <>
         <h1>{article.title}</h1>
-        <UpvotesSection articleName={name} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
-        <DownvotesSection articleName={name} downvotes={articleInfo.downvotes} setArticleInfo={setArticleInfo} />
 
         {article.content.map((paragraph, key) => (
             <p key={key}>{paragraph}</p>
         ))}
+        <div className="vote-btn">
+        <UpvotesSection articleName={name} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
+        <DownvotesSection articleName={name} downvotes={articleInfo.downvotes} setArticleInfo={setArticleInfo} />
+        </div>
         <CommentsList comments={articleInfo.comments} />
             <AddCommentForm articleName={name}setArticleInfo={setArticleInfo} />
         <h3>Other Articles:</h3>

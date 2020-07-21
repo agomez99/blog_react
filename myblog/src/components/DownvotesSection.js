@@ -2,7 +2,6 @@ import React from 'react';
 import {Dislike } from 'grommet-icons';
 
 
-
 const DownvotesSection =({articleName, downvotes, setArticleInfo}) =>{
 
     const downvoteArticle = async ()=>{
