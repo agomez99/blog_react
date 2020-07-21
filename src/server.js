@@ -5,11 +5,30 @@ import path from 'path';
 const routes = require("../routes");
 
 require('dotenv').config()
-
 const app = express();
-app.use (express.static(path.join(__dirname, '/build')));
-app.use(bodyParser.json());
+
+app.use(express.json({ extended: true }))
+
+
+
+// Serve static assets in production
+if (process.env.NODE_ENV === 'production') {
+  // Express will serve up production assets
+  app.use(express.static('client/build'));
+
+  // Express serve up index.html file if it doesn't recognize route
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
+
 const MONGODB = process.env.REACT_APP_KEY
+
+
+
+
+
 const withDB = async (operations, res) => {
     try {
         const client = await MongoClient.connect(MONGODB, { useNewUrlParser: true });
