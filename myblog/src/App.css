@@ -100,3 +100,14 @@ nav a:hover {
   border-bottom: 2px solid black;
   padding: 16px;
 }
+
+nav li {
+list-style: none;
+padding-right:30px;
+
+}
+
+.social{
+  text-align: center;
+
+}

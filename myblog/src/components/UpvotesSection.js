@@ -1,4 +1,5 @@
 import React from 'react';
+import {Like} from 'grommet-icons';
 
 
 
@@ -10,11 +11,13 @@ const UpvotesSection =({articleName, upvotes, setArticleInfo}) =>{
         const body = await result.json();
             setArticleInfo(body);
     }
+ 
 return  (
     <div id="upvotes-section">
+        
+<button onClick={()=> upvoteArticle()}><Like color="white"/></button>
+    <p>{upvotes} Upvotes</p>
 
-<button onClick={()=> upvoteArticle()}>Add Upvote</button>
-    <p>This post has been upvoted {upvotes} times</p>
 
     </div>
 
