@@ -16,7 +16,6 @@ return  (
         
 
     <button onClick={()=> downvoteArticle()}><Dislike color="white"/></button>
-    <p> {downvotes} Downvotes</p>
 
     </div>
 

@@ -31,7 +31,7 @@ const ArticlePage = ({ match }) => {
     return (
         <>
         <h1>{article.title}</h1>
-
+        <img src={article.image}/>
         {article.content.map((paragraph, key) => (
             <p key={key}>{paragraph}</p>
         ))}

@@ -79,7 +79,7 @@ nav a:hover {
 
 #add-comment-form input, textarea {
   display: block;
-  width: 800px;
+  width: 660px;
   padding: 8px;
   border-radius: 8px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -98,8 +98,11 @@ nav a:hover {
 }
 
 .comment {
-  border-bottom: 2px solid black;
+  border: 2px solid black;
   padding: 16px;
+  border-radius: 8px;
+  margin-bottom:10px;
+
 }
 
 nav li {

@@ -2,6 +2,7 @@ const articles = [
     {
         name: 'learn-react',
         title: 'The Fastest Way to Learn React',
+        image: 'https://user-images.githubusercontent.com/6663243/30812717-88f8a34e-a1d9-11e7-8fe5-968574870c12.png' ,
         content: [
             `Welcome! Today we're going to be talking about the fastest way to
             learn React. We'll be discussing some topics such as proin congue
