@@ -6,6 +6,28 @@ import DownvotesSection from '../components/DownvotesSection'
 import AddCommentForm from '../components/AddCommentForm';
 import NotFoundPage from './NotFoundPage';
 import articleContent from './article-content';
+import {
+    EmailIcon,
+    FacebookIcon,
+    FacebookMessengerIcon,
+    InstapaperIcon,
+    LineIcon,
+    LinkedinIcon,
+    LivejournalIcon,
+    MailruIcon,
+    OKIcon,
+    PinterestIcon,
+    PocketIcon,
+    RedditIcon,
+    TelegramIcon,
+    TumblrIcon,
+    TwitterIcon,
+    ViberIcon,
+    VKIcon,
+    WeiboIcon,
+    WhatsappIcon,
+    WorkplaceIcon
+  } from "react-share";
 import  '../App.css';
 const ArticlePage = ({ match }) => {
 
@@ -35,6 +57,14 @@ const ArticlePage = ({ match }) => {
         {article.content.map((paragraph, key) => (
             <p key={key}>{paragraph}</p>
         ))}
+        <div className="btn-ctn">
+        <h3>Share:</h3>
+        <LinkedinIcon  size={50} round={true}/>
+        <FacebookIcon size={50} round={true}/>
+        <TwitterIcon size={50} round={true}/>
+        <RedditIcon  size={50} round={true}/>
+        </div>
+
         <div className="vote-btn">
         <UpvotesSection articleName={name} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
         <DownvotesSection articleName={name} downvotes={articleInfo.downvotes} setArticleInfo={setArticleInfo} />

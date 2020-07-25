@@ -27,7 +27,7 @@ const AddCommentForm = ({articleName, setArticleInfo}) => {
   return (
     <div id="add-comment-form">
       <h3>Add a comment</h3>
-      <form>
+      <form onSubmit={event => { event.preventDefault(); alert('submitted') }}>
 
         <label>
           Name:
