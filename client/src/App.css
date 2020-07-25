@@ -52,6 +52,9 @@ nav a {
   padding-top: 20%;
 }
 
+.article-head{
+  margin-bottom:60px;
+}
 .article-list-item {
   text-decoration: none;
   color: black;
@@ -59,12 +62,13 @@ nav a {
 }
 
 .article-list-item p {
-  padding-bottom: 32px;
-  border-bottom: 2px solid black;
+  padding-bottom: 60px;
+
+  border-bottom: 2px solid rgb(128, 128, 128);
 }
 
 #add-comment-form {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(100, 100, 100);
   padding: 16px;
 }
 
@@ -79,7 +83,7 @@ nav a {
   border-radius: 8px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
-  border: 2px solid black;
+  border: 2px solid rgb(107, 107, 107);
   margin-bottom: 16px;
 }
 
@@ -94,7 +98,7 @@ nav a {
 }
 
 .comment {
-  border: 2px solid black;
+  border: 2px solid rgb(219, 164, 250);
   padding: 16px;
   border-radius: 8px;
   margin-bottom:10px;

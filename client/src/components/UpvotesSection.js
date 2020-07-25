@@ -23,7 +23,7 @@ return  (
               {/* <button onClick={()=> upvoteArticle()}></button> */}
 
 {/* <button onClick={()=> upvoteArticle()}><Like color="white"/></button> */}
-    <p>{upvotes} Upvotes</p>
+    <label>{upvotes} Likes</label>
 
 
     </div>

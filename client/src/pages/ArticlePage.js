@@ -57,6 +57,11 @@ const ArticlePage = ({ match }) => {
         {article.content.map((paragraph, key) => (
             <p key={key}>{paragraph}</p>
         ))}
+        <div className="vote-btn">
+        Like
+        <UpvotesSection articleName={name} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
+        <DownvotesSection articleName={name} downvotes={articleInfo.downvotes} setArticleInfo={setArticleInfo} />
+        </div>
         <div className="btn-ctn">
         <h3>Share:</h3>
         <LinkedinIcon  size={50} round={true}/>
@@ -65,10 +70,7 @@ const ArticlePage = ({ match }) => {
         <RedditIcon  size={50} round={true}/>
         </div>
 
-        <div className="vote-btn">
-        <UpvotesSection articleName={name} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
-        <DownvotesSection articleName={name} downvotes={articleInfo.downvotes} setArticleInfo={setArticleInfo} />
-        </div>
+  
         <CommentsList comments={articleInfo.comments} />
             <AddCommentForm articleName={name}setArticleInfo={setArticleInfo} />
         <h3>More Articles:</h3>
