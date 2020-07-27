@@ -41,19 +41,19 @@ nav li {
 nav a {
   text-decoration: none;
   font-weight: bold;
-  padding: 16px 32px;
-
+  padding: 15px 8px;
+  color:white;
 }
 
 
 #page-body {
   max-width: 700px;
   margin: auto;
-  padding-top: 20%;
+  padding-top: 15%;
 }
 
 .article-head{
-  margin-bottom:60px;
+  margin-bottom:20px;
 }
 .article-list-item {
   text-decoration: none;
@@ -93,10 +93,11 @@ nav a {
 }
 
 #upvotes-section button, p {
-  display: inline-block;
   margin-right: 16px;
 }
-
+#upvotes-section{
+  display:flex;
+}
 .comment {
   border: 2px solid rgb(219, 164, 250);
   padding: 16px;
@@ -117,9 +118,12 @@ padding-right:30px;
 }
 
 .vote-btn{
-  display:flex;
+  display:block;
 }
 .btn-ctn{
   padding-top:30px;
   padding-bottom:35px;
+}
+.like-label{
+  margin-top: 40px;
 }

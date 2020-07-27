@@ -15,7 +15,7 @@ return  (
     <div id="downvotes-section">
         
 
-    <button onClick={()=> downvoteArticle()}><Dislike color="white"/></button>
+    <button onClick={()=> downvoteArticle()}><Dislike color="black"/></button>
 
     </div>
 

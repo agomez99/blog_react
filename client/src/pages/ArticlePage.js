@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ArticlesList from '../components/ArticlesList';
 import CommentsList from '../components/CommentsList';
 import UpvotesSection from '../components/UpvotesSection';
-import DownvotesSection from '../components/DownvotesSection'
 import AddCommentForm from '../components/AddCommentForm';
 import NotFoundPage from './NotFoundPage';
 import articleContent from './article-content';
@@ -10,23 +9,9 @@ import {
     EmailIcon,
     FacebookIcon,
     FacebookMessengerIcon,
-    InstapaperIcon,
-    LineIcon,
     LinkedinIcon,
-    LivejournalIcon,
-    MailruIcon,
-    OKIcon,
-    PinterestIcon,
-    PocketIcon,
     RedditIcon,
-    TelegramIcon,
-    TumblrIcon,
-    TwitterIcon,
-    ViberIcon,
-    VKIcon,
-    WeiboIcon,
-    WhatsappIcon,
-    WorkplaceIcon
+    TwitterIcon
   } from "react-share";
 import  '../App.css';
 const ArticlePage = ({ match }) => {
@@ -53,21 +38,26 @@ const ArticlePage = ({ match }) => {
     return (
         <>
         <h1>{article.title}</h1>
-        <img src={article.image}/>
+        <img src={article.image} alt="feature-img"/>
         {article.content.map((paragraph, key) => (
             <p key={key}>{paragraph}</p>
         ))}
+
         <div className="vote-btn">
-        Like
         <UpvotesSection articleName={name} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
-        <DownvotesSection articleName={name} downvotes={articleInfo.downvotes} setArticleInfo={setArticleInfo} />
         </div>
+
+        
         <div className="btn-ctn">
         <h3>Share:</h3>
         <LinkedinIcon  size={50} round={true}/>
         <FacebookIcon size={50} round={true}/>
+        <FacebookMessengerIcon size ={50} round={true}/>
         <TwitterIcon size={50} round={true}/>
-        <RedditIcon  size={50} round={true}/>
+        <RedditIcon size={50} round={true}/>
+
+        <EmailIcon size={50} round={true}/>
+
         </div>
 
   

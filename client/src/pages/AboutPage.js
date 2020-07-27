@@ -8,7 +8,7 @@ const AboutPage = () =>(
         <Avatar src={image} /> 
         <p>Welcome to my blog by Austine Gomez, I am new junior full stack devloper, with an emphasis more on the front-end. I have a CS 
         degree and love to write code. I enjoy learning new technologies and the challeneges it brings  </p>
-     
+        <p>I currently work full-time for Opentext a company I've been with for a long time and ready to</p>
     </>
 )
 

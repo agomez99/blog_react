@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import {Like} from 'grommet-icons';
+// import {Like} from 'grommet-icons';
 import Heart from "react-animated-heart";
 
 
@@ -21,9 +21,8 @@ return  (
     <div id="upvotes-section">
               <Heart isClick={isClick} onClick={() => upvoteArticle()} />
               {/* <button onClick={()=> upvoteArticle()}></button> */}
-
-{/* <button onClick={()=> upvoteArticle()}><Like color="white"/></button> */}
-    <label>{upvotes} Likes</label>
+              { /* <button onClick={()=> upvoteArticle()}><Like color="white"/></button> */}
+    <label className="like-label">{upvotes} Likes</label>
 
 
     </div>
