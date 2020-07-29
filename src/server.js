@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const MONGODB = process.env.REACT_APP_KEY
+//const MONGODB = process.env.REACT_APP_KEY
 
 
 
@@ -31,7 +31,9 @@ const MONGODB = process.env.REACT_APP_KEY
 
 const withDB = async (operations, res) => {
     try {
-        const client = await MongoClient.connect(MONGODB, { useNewUrlParser: true });
+        const client = await MongoClient.connect(MONDOGB_URI, { useNewUrlParser: true });
+        // const client = await MongoClient.connect(MONGODB , { useNewUrlParser: true });
+
         const db = client.db('my-blog');
     
         await operations(db);
